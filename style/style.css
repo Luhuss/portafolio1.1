@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --color-primario: #000000;
+    --color-secundario: #FF41ED;
+    --color-terciario: #8109B7;
+    --color-hover: #E49BFF;
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'Krona One', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-principal);
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, main {
+    flex: 1;
+}
+
+.header {
+    padding: 2% 0 0 15%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link {
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion {
+    /*background-color: black;*/
+    display: flex;
+    align-items: center;
+    padding: 5% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2rem;
+    font-family: var(--fuente-secundaria);
+}
+
+.titulo-destaque {
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__texto {
+    font-size: 1.5rem;
+    font-family: var(--fuente-principal);
+}
+
+.presentacion__enlances {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlances__subtitulos {
+    font-family: var(--fuente-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlances__link {
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion__enlances__link:hover {
+    background-color: var(--color-hover);
+}
+
+/*.presentacion__imagen {
+    width: 50%;
+}*/
+
+.presentacion__imagen {
+    position: relative;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que el pseudo-elemento no se salga de los bordes redondeados */
+}
+
+.presentacion__imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta el valor alfa para cambiar el nivel de oscuridad */
+    z-index: 1; /* Asegura que el pseudo-elemento se coloque encima de la imagen */
+}
+
+.presentacion__imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 0;
+    position: relative; /* Necesario para el posicionamiento adecuado del pseudo-elemento */
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: auto;
+}
+
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 10%;
+    }
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: auto;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .header {
+        padding: 5%;
+    }
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .header {
+        padding: 5%;
+    }
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: auto;
+    }
+
+}
+
