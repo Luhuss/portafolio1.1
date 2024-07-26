@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100..900&display=swap');
 
 :root {
-    --color-primario: #1d1d1d;
-    --color-secundario: #b0b0b0;
-    --color-terciario: #e0e0e0;
+    --color-primario: #fafdff;
+    --color-secundario: #65aff3;
+    --color-terciario: #297dc9;
     --color-hover: #bdc3c7;
     --fuente-principal: 'Montserrat', sans-serif;
     --fuente-secundaria: 'Krona One', sans-serif;
@@ -270,7 +270,7 @@ header, main {
     }
 
     .container {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -293,7 +293,7 @@ header, main {
     }
 
     .container {
-        width: 80%;
+        width: 90%;
     }
 
 }
@@ -317,7 +317,7 @@ header, main {
     }
 
     .container {
-        width: 80%;
+        width: 90%;
     }
 
 }
