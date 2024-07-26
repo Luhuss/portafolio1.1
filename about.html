@@ -25,10 +25,38 @@
             </p>
             
         </section>
-        <img class="presentacion__imagen" src="assets/IMG_8648.JPEG" alt="Imagen Ana Garcia trabajando">
+
+        <section class="carrusel">
+            <div class="container">
+                <div class="slides display-none">
+                    <img src="./assets/proyecto_primera_web.png" alt="Captura de la primera web">
+                </div>
+                <div class="slides display-none">
+                    <img src="./assets/proyecto_viaje.png" alt="Captura del proyecto viaje">
+                </div>
+                <div class="slides display-none">
+                    <img src="./assets/formulario_registro.png" alt="Captura del formulario registro">
+                </div>
+
+                <a href="#" class="prev" onclick="prevSlide()"> < </a>
+                <a href="#" class="next" onclick="nextSlide()"> > </a>
+            </div>
+            <div class="container-dots">
+                <span class="dot" onclick="showSlide(0)"></span>
+                <span class="dot" onclick="showSlide(1)"></span>
+                <span class="dot" onclick="showSlide(2)"></span>
+            </div>
+            <div class="target display-none">
+                <!---imagen-->
+                <div class="container-img"></div>
+                <button onclick="closeImage()" >Cerrar</button>
+            </div>
+        </section>
+        <!--<img class="presentacion__imagen" src="assets/IMG_8648.JPEG" alt="Imagen Ana Garcia trabajando">-->
     </main>
     <footer class="footer">
         <p>Desarrollado por Luis Marabolí</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

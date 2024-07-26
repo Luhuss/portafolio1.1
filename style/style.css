@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100..900&display=swap');
 
 :root {
-    --color-primario: #000000;
-    --color-secundario: #FF41ED;
-    --color-terciario: #8109B7;
-    --color-hover: #E49BFF;
+    --color-primario: #1d1d1d;
+    --color-secundario: #b0b0b0;
+    --color-terciario: #e0e0e0;
+    --color-hover: #bdc3c7;
     --fuente-principal: 'Montserrat', sans-serif;
     --fuente-secundaria: 'Krona One', sans-serif;
 }
@@ -83,6 +83,54 @@ header, main {
     font-family: var(--fuente-principal);
 }
 
+.container {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.display-none {
+    display: none;
+}
+
+.prev, .next {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    top: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    text-shadow: 6px 2px 6px black;
+}
+
+.container-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .presentacion__enlances {
     display: flex;
     justify-content: space-between;
@@ -91,10 +139,54 @@ header, main {
     gap: 32px;
 }
 
+.active, .dot:hover {
+    background-color: gray;
+}
+
+.modal-on {
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal-on::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
 .presentacion__enlances__subtitulos {
     font-family: var(--fuente-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+.target {
+    position: absolute;
+    top: 0;
+}
+
+.target img {
+    height: 90vh;
+}
+
+.target button {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.target button:hover {
+    background-color: var(--color-hover);
 }
 
 .presentacion__enlances__link {
@@ -136,7 +228,7 @@ header, main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Ajusta el valor alfa para cambiar el nivel de oscuridad */
+    background: rgba(0, 0, 0, 0.3); /* Ajusta el valor alfa para cambiar el nivel de oscuridad */
     z-index: 1; /* Asegura que el pseudo-elemento se coloque encima de la imagen */
 }
 
@@ -162,7 +254,7 @@ header, main {
 @media (max-width: 1200px) {
 
     .header {
-        padding: 10%;
+        padding: 5%;
     }
     .header__menu {
         justify-content: center;
@@ -177,6 +269,9 @@ header, main {
         width: auto;
     }
 
+    .container {
+        width: 80%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -197,6 +292,10 @@ header, main {
         width: auto;
     }
 
+    .container {
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -215,6 +314,10 @@ header, main {
 
     .presentacion__contenido {
         width: auto;
+    }
+
+    .container {
+        width: 80%;
     }
 
 }
