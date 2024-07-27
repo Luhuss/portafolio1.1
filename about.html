@@ -7,58 +7,59 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html" >Home</a>
+    <header class="sobremi__header">
+        <nav class="sobremi__header__menu">
+            <a class="sobremi__header__menu__link" href="index.html" >Home</a>
             <!--<a class="header__menu__link" href="about.html" >Sobre mí</a>-->
-            <a class="header__menu__link" href="https://luhuss.github.io/juego-secreto-Luhuss/" >Juego</a>
+            <a class="sobremi__header__menu__link" href="https://luhuss.github.io/juego-secreto-Luhuss/" >Juego</a>
         </nav>
     </header>
-    <main class="presentacion">
-        <section class="presentacion__contenido">
-            <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
-            <p class="presentacion__contenido__texto">
-                Soy un profesional apasionado de 35 años con una trayectoria laboral diversa. Inicié como contador, exploré la ciudad como conductor de buses y ahora me sumerjo en el emocionante campo de la Tecnología de la Información (TI). Mi verdadera pasión reside en la tecnología, y estoy comprometido a mejorar y crecer en este fascinante sector. Mi enfoque es aprender constantemente y aplicar mis habilidades para enfrentar desafíos en el ámbito de la TI. ¡Acompáñame en este viaje mientras transformo mi pasión por la tecnología en logros significativos!
+    <main class="sobremi__presentacion">
+        <section class="sobremi__presentacion__contenido">
+            <h1 class="sobremi__presentacion__contenido__titulo">Sobre mí</h1>
+            <p class="sobremi__presentacion__contenido__texto">
+                Soy un profesional apasionado de 35 años con una trayectoria laboral diversa. Inicié como contador, exploro la ciudad como conductor de buses y ahora me sumerjo en el emocionante campo de la Tecnología de la Información (TI). Mi verdadera pasión reside en la tecnología, y estoy comprometido a mejorar y crecer en este fascinante sector. Mi enfoque es aprender constantemente y aplicar mis habilidades para enfrentar desafíos en el ámbito de la TI. ¡Acompáñame en este viaje mientras transformo mi pasión por la tecnología en logros significativos!
             </p>
-            <p class="presentacion__contenido__texto">
+            <p class="sobremi__presentacion__contenido__texto">
                 ¡Les dejo un pequeño juego para que se diviertan!
             </p>
             
         </section>
 
-        <section class="carrusel">
-            <div class="container">
-                <div class="slides display-none">
+        <section class="sobremi__carrusel">
+            <div class="sobremi__container">
+                <h4 class="sobremi__container__texto">Mis proyectos</h4>
+                <div class="sobremi-slides display-none">
                     <img src="./assets/portafolio.jpg" alt="Captura de la primera web">
                 </div>
-                <div class="slides display-none">
+                <div class="sobremi-slides display-none">
                     <img src="./assets/proyectoViaje.jpg" alt="Captura del proyecto viaje">
                 </div>
-                <div class="slides display-none">
+                <div class="sobremi-slides display-none">
                     <img src="./assets/formularioRegistro.jpg" alt="Captura del formulario registro">
                 </div>
-                <div class="slides display-none">
+                <div class="sobremi-slides display-none">
                     <img src="./assets/juego.jpg" alt="Captura del Juego">
                 </div>
 
                 <a href="#" class="prev" onclick="prevSlide()"> < </a>
                 <a href="#" class="next" onclick="nextSlide()"> > </a>
             </div>
-            <div class="container-dots">
+            <div class="sobremi-container-dots">
                 <span class="dot" onclick="showSlide(0)"></span>
                 <span class="dot" onclick="showSlide(1)"></span>
                 <span class="dot" onclick="showSlide(2)"></span>
                 <span class="dot" onclick="showSlide(3)"></span>
             </div>
-            <div class="target display-none">
-                <!---imagen-->
+            <!--<div class="target display-none">
+                imagen
                 <div class="container-img"></div>
                 <button onclick="closeImage()" >Cerrar</button>
-            </div>
+            </div>-->
         </section>
-        <!--<img class="presentacion__imagen" src="assets/IMG_8648.JPEG" alt="Imagen Ana Garcia trabajando">-->
+        <!--<img class="presentacion__imagen" src="assets/IMG_8648.JPEG" alt="Imagen Luis Maraboli trabajando">-->
     </main>
-    <footer class="footer">
+    <footer class="sobremi-footer">
         <p>Desarrollado por Luis Marabolí</p>
     </footer>
     <script src="script.js"></script>

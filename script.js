@@ -5,7 +5,7 @@ setInterval(nextSlide, 4000);
 
 function showSlide(n) {
     currentSlide = n;
-    let slides = document.getElementsByClassName('slides'); //Lista con todos los elementos con clase slides
+    let slides = document.getElementsByClassName('sobremi-slides'); //Lista con todos los elementos con clase slides
 
     for (let i= 0; i<slides.length; i++) {
         slides[i].classList.add("display-none");
@@ -24,7 +24,7 @@ function showSlide(n) {
 
 function nextSlide() {
     currentSlide++;
-    let tamano_slides = document.getElementsByClassName('slides').length;
+    let tamano_slides = document.getElementsByClassName('sobremi-slides').length;
     if(currentSlide === tamano_slides) {
         currentSlide = 0;
     }
@@ -33,7 +33,7 @@ function nextSlide() {
 
 function prevSlide() {
     currentSlide--;
-    let tamano_slides = document.getElementsByClassName('slides').length
+    let tamano_slides = document.getElementsByClassName('sobremi-slides').length
     if(currentSlide < 0) {
         currentSlide = tamano_slides -1;
     }
